@@ -20,5 +20,12 @@ data class Note(
 
     @ColumnInfo(name = "date")
     val date : String
-): Serializable
-
+): Serializable {
+    override fun toString(): String {
+        return "$title" +
+                "\n" +
+                "$description" +
+                "\n" +
+                "Due: $date"
+    }
+}
